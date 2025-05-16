@@ -13,8 +13,10 @@ let playing;
 let lastStumpX = 0; 
 
 const MIN_STUMP_DIST = 180; 
+let arcadeFont;
 
-function preload(){
+function preload() {
+  arcadeFont = loadFont('PressStart2P-Regular.ttf');
   dImg = loadImage('dino.png');
   sImg = loadImage('Stump.png');
   bImg= loadImage('BG.png');
@@ -80,10 +82,11 @@ function draw() {
     d.show();
     d.move();
 
-    textSize(32);
+    textFont(arcadeFont);
+    textSize(20);
     fill(100, 100, 100);
     strokeWeight(0);
-    text('Score: '+ score, 10, 30);
+    text("000" + score, 10, 30);
   }
 }
 

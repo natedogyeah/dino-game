@@ -5,3 +5,6 @@ html, body {
 canvas {
   display: block;
 }
+body, canvas {
+  font-family: 'Press Start 2P', monospace;
+}
